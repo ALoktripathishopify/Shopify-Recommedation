@@ -1,5 +1,5 @@
 const express = require('express');
-const request = require('request');
+
 const apiKey = "d92db8f1e05f62fefa8ba3e1a928303e";
 const password = "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";
 const baseUrl = "https://aloktest2024.myshopify.com/admin/api/2022-07";
@@ -25,7 +25,7 @@ const fetchRecommendedProducts = async () => {
   }
 };
 
-app.get('/api/recommendations', async (req, res) => {
+app.get('/api', async (req, res) => {
   try {
     const recommendedProducts = await fetchRecommendedProducts();
     res.json({
